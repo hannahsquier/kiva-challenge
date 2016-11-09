@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html ng-app="kiva">
+<head>
+  <title>Kiva</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src= "js/angular-ui-router.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles/clean-blog.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.1/lodash.js"></script>
+  <script src= "js/app.js"></script>
+
+  <!-- Directives -->
+
+  <!-- Services -->
+  <script src= "js/services/kivaAPIService.js"></script>
+
+  <!-- Controllers -->
+  <script src= "js/controllers/tableCtrl.js"></script>
+  <script src= "js/controllers/chartsCtrl.js"></script>
+
+  <!-- Filters -->
+  <script src= "js/filters/filters.js"></script>
+
+</head>
+<body>
+   <header class="intro-header" style="background-image: url('https://www.kiva.org/cms/page/images/hp-slideshow-r1-sm-retina_0.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Kiva Recent Donors</h1>
+                        <hr class="small">
+                        <span class="subheading">Discover who has made recent donations and the impact they are having.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div ui-view="charts"></div>
+               <div ui-view="table"></div>
+
+            </div>
+
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div ui-view="table"></div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  <div class="row">
+
+
+
+
+  </div>
+
+</body>
+</html>
